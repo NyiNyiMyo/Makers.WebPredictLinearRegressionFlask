@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Salary Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+  <center>
+ <div class="container">
+  <br>
+  <br>
+  <img src="../static/favicon.ico">
+	<h1>Salary Predictor</h1>
+
+    <form action="{{ url_for('piford_salary_predictor')}}"method="post">
+    	<input type="text" name="experience" placeholder="Experience" required="required" />
+      <input type="text" name="test_score" placeholder="Test Score" required="required" />
+      <br>
+		  <input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+    <br>
+    <br>
+      <button type="submit" class="btn" style="width: 150px;">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+  </center>
+
+</body>
+</html>
