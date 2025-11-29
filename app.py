@@ -1,9 +1,14 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
+ 
+@app.route("/favicon.ico")
+def favicon():
+    # /vercel.svg is automatically served when included in the public/** directory.
+    return redirect("/vercel.svg", code=307)
 
 @app.route('/')
 def home():
