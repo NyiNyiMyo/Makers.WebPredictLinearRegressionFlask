@@ -1,13 +1,9 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
- 
-@app.route("/favicon.ico")
-def favicon():
-    return url_for('static', filename='data:,')
 
 @app.route('/')
 def home():
