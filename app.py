@@ -7,7 +7,7 @@ model = pickle.load(open('model.pkl', 'rb'))
  
 @app.route("/favicon.ico")
 def favicon():
-    return redirect("/images/favicon.ico", code=307)
+    return redirect("/images/makers.ico", code=307)
 
 @app.route('/')
 def home():
