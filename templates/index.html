@@ -13,7 +13,7 @@
  <div class="container">
   <br>
   <br>
-  <img src="../static/favicon.ico">
+  <img src="{{ url_for('static', filename='favicon.ico') }}">
 	<h1>Salary Predictor</h1>
 
     <form action="{{ url_for('piford_salary_predictor')}}"method="post">
