@@ -22,5 +22,5 @@ def piford_salary_predictor():
 
     return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run('0.0.0.0',debug=False, port=8080)
